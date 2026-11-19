@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101827">
+<title>ФураПДД — правила для водителей грузовиков</title>
+<style>
+:root{--bg:#0b1220;--panel:#151f31;--panel2:#1c2940;--text:#f4f7fb;--muted:#b7c3d6;--yellow:#ffc83d;--line:#2c3a52;--green:#42d392}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 Arial,sans-serif}
+header{background:linear-gradient(130deg,#111d31,#263d5e);padding:34px 18px 28px;border-bottom:3px solid var(--yellow)}
+.wrap{max-width:1000px;margin:auto;padding:0 16px}
+.logo{font-weight:900;letter-spacing:1px;color:var(--yellow);font-size:14px}
+h1{font-size:clamp(30px,7vw,48px);line-height:1.08;margin:14px 0}
+header p{max-width:650px;color:#d5deeb;margin:0}
+nav{display:flex;gap:9px;flex-wrap:wrap;margin-top:22px}
+nav a{color:white;text-decoration:none;background:#ffffff18;border:1px solid #ffffff30;padding:8px 12px;border-radius:20px;font-size:14px}
+main{padding:26px 0 50px}
+section{margin:22px 0;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px}
+h2{margin:0 0 14px;font-size:23px} h3{margin:0 0 7px;color:var(--yellow);font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.card{background:var(--panel2);border:1px solid var(--line);padding:15px;border-radius:13px}
+.card p{margin:0;color:var(--muted)}
+ul{padding-left:21px;color:var(--muted);margin-bottom:0} li{margin:8px 0}
+.notice{border-left:4px solid var(--yellow);padding:12px 14px;background:#ffc83d12;border-radius:8px;color:#f7e8bd}
+.checklist label{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line);color:var(--muted)}
+input[type=checkbox]{accent-color:var(--green);width:19px;height:19px;margin-top:3px;flex-shrink:0}
+button{background:var(--yellow);color:#1b2432;border:0;padding:11px 16px;border-radius:10px;font-weight:700;font-size:15px;cursor:pointer}
+button:hover{filter:brightness(1.06)}
+.question{padding:14px 0;border-bottom:1px solid var(--line)}
+.question p{margin:0 0 9px;font-weight:700}
+.question label{display:block;color:var(--muted);padding:5px 0}
+#result{font-weight:700;margin-top:12px}
+footer{text-align:center;color:#8796ad;padding:22px;font-size:13px}
+.small{font-size:13px;color:#9eacc1}
+a{color:var(--yellow)}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap">
+  <div class="logo">🚛 ФУРАПДД</div>
+  <h1>Правила для водителей фур</h1>
+  <p>Понятный учебный сайт о безопасности грузовых автомобилей, подготовке к рейсу и правилах дорожного движения.</p>
+  <nav>
+   <a href="#rules">ПДД</a><a href="#check">Перед рейсом</a><a href="#cargo">Груз</a><a href="#quiz">Тест</a>
+  </nav>
+ </div>
+</header>
+<main class="wrap">
+ <section id="rules">
+  <h2>📘 Главные правила на дороге</h2>
+  <div class="grid">
+   <div class="card"><h3>Скорость и дистанция</h3><p>Выбирай скорость с учётом массы фуры, погоды, видимости и состояния дороги. Держи увеличенную дистанцию: тяжёлому грузовику нужно больше места для остановки.</p></div>
+   <div class="card"><h3>Повороты и перестроение</h3><p>Заранее включай указатель поворота, проверяй зеркала и слепые зоны. Помни, что при повороте прицеп может идти по более короткой траектории.</p></div>
+   <div class="card"><h3>Спуск и подъём</h3><p>Перед длинным спуском заранее выбирай подходящую передачу и используй предусмотренные тормозные системы. Не катись на нейтральной передаче.</p></div>
+   <div class="card"><h3>Погода</h3><p>В дождь, снег, туман или гололёд снижай скорость плавно, увеличивай дистанцию и избегай резких манёвров.</p></div>
+   <div class="card"><h3>Усталость</h3><p>Не садись за руль уставшим. Делай остановки для отдыха и соблюдай действующие требования к режиму труда и отдыха водителей.</p></div>
+   <div class="card"><h3>Знаки и ограничения</h3><p>Следи за дорожными знаками, временными ограничениями, высотой мостов, шириной проезда и ограничениями для грузового транспорта.</p></div>
+  </div>
+ </section>
+
+ <section id="check">
+  <h2>🧰 Проверка перед рейсом</h2>
+  <p class="small">Отмечай пункты после проверки. Это учебный список, он не заменяет инструкцию перевозчика и обязательный техосмотр.</p>
+  <div class="checklist">
+   <label><input type="checkbox"> Проверены тормоза, рулевое управление и сцепное устройство.</label>
+   <label><input type="checkbox"> Проверены шины, давление и крепление колёс.</label>
+   <label><input type="checkbox"> Работают фары, стоп-сигналы, поворотники и аварийная сигнализация.</label>
+   <label><input type="checkbox"> Проверены зеркала, стеклоочистители и обзор.</label>
+   <label><input type="checkbox"> Груз размещён равномерно и надёжно закреплён.</label>
+   <label><input type="checkbox"> Документы на водителя, автомобиль и груз подготовлены.</label>
+   <label><input type="checkbox"> Маршрут проверен: высота мостов, ограничения и дорожные работы.</label>
+   <label><input type="checkbox"> Водитель отдохнул и готов безопасно вести автомобиль.</label>
+  </div>
+ </section>
+
+ <section id="cargo">
+  <h2>📦 Безопасная перевозка груза</h2>
+  <ul>
+   <li>Не превышай разрешённую максимальную массу и допустимые нагрузки на оси.</li>
+   <li>Распределяй груз равномерно и учитывай указания по размещению.</li>
+   <li>Используй подходящие исправные ремни и другие средства крепления.</li>
+   <li>Перед выездом проверь, что груз не закрывает световые приборы и номерные знаки.</li>
+   <li>После начала движения и во время остановок проверяй крепление груза, когда это безопасно и требуется.</li>
+  </ul>
+  <p class="notice">Важно: перевозка опасных, крупногабаритных и тяжеловесных грузов может требовать специальных документов, маркировки, оборудования и согласованного маршрута.</p>
+ </section>
+
+ <section>
+  <h2>🇰🇬 Важно для поездок по Кыргызстану</h2>
+  <p>Всегда руководствуйся действующими ПДД Кыргызской Республики, дорожными знаками и официальными ограничениями для конкретного участка. Допустимые скорость, масса, габариты и режим труда могут зависеть от категории дороги, типа транспорта и условий перевозки.</p>
+  <p class="small">Этот сайт — учебная памятка, а не официальный правовой источник. Перед рейсом проверяй актуальные требования у уполномоченных органов и работодателя.</p>
+ </section>
+
+ <section id="quiz">
+  <h2>📝 Проверь свои знания</h2>
+  <form id="quizForm">
+   <div class="question"><p>1. Что нужно сделать перед перестроением?</p>
+    <label><input type="radio" name="q1" value="a"> Только резко повернуть руль</label>
+    <label><input type="radio" name="q1" value="b"> Проверить зеркала и слепые зоны, подать сигнал и убедиться в безопасности</label>
+    <label><input type="radio" name="q1" value="c"> Посигналить и сразу перестроиться</label>
+   </div>
+   <div class="question"><p>2. Почему фуре нужна увеличенная дистанция?</p>
+    <label><input type="radio" name="q2" value="a"> Из-за большей массы и более длинного тормозного пути</label>
+    <label><input type="radio" name="q2" value="b"> Чтобы другие машины не обгоняли</label>
+    <label><input type="radio" name="q2" value="c"> Только для экономии топлива</label>
+   </div>
+   <div class="question"><p>3. Что проверить перед рейсом?</p>
+    <label><input type="radio" name="q3" value="a"> Только цвет кабины</label>
+    <label><input type="radio" name="q3" value="b"> Только уровень топлива</label>
+    <label><input type="radio" name="q3" value="c"> Тормоза, шины, свет, сцепку и крепление груза</label>
+   </div>
+   <div class="question"><p>4. Как действовать на скользкой дороге?</p>
+    <label><input type="radio" name="q4" value="a"> Делать резкие манёвры</label>
+    <label><input type="radio" name="q4" value="b"> Снизить скорость плавно и увеличить дистанцию</label>
+    <label><input type="radio" name="q4" value="c"> Ехать ближе к впереди идущей машине</label>
+   </div>
+   <button type="button" onclick="checkQuiz()">Проверить ответы</button>
+   <div id="result" aria-live="polite"></div>
+  </form>
+ </section>
+</main>
+<footer>ФУРАПДД · Учись, проверяй автомобиль и выбирай безопасную дорогу.</footer>
+<script>
+function checkQuiz(){
+ const answers={q1:"b",q2:"a",q3:"c",q4:"b"};
+ let score=0, total=Object.keys(answers).length;
+ for(const [q,a] of Object.entries(answers)){
+  const selected=document.querySelector('input[name="'+q+'"]:checked');
+  if(selected && selected.value===a) score++;
+ }
+ const result=document.getElementById("result");
+ result.textContent="Твой результат: "+score+" из "+total+". "+(score===total?"Отлично! Все ответы верные.":"Повтори правила и попробуй ещё раз.");
+}
+</script>
+</body>
+</html>
